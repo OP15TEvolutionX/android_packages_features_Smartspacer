@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.kieronquinn.app.smartspacer">
+        <permission name="android.permission.MANAGE_SMARTSPACE" />
+        <permission name="android.permission.MANAGE_ACTIVITY_TASKS" />
+        <permission name="android.permission.REAL_GET_TASKS" />
+        <permission name="android.permission.ACCESS_SMARTSPACE" />
+        <permission name="android.permission.INTERACT_ACROSS_USERS" />
+        <permission name="android.permission.MANAGE_USERS" />
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
+        <permission name="android.permission.QUERY_ALL_PACKAGES" />
+    </privapp-permissions>
+    <signature-permissions package="com.kieronquinn.app.smartspacer">
+        <permission name="android.permission.MANAGE_ACTIVITY_TASKS" />
+    </signature-permissions>
+</permissions>

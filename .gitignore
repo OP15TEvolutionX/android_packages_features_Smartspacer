@@ -357,3 +357,6 @@ hs_err_pid*
 keystore.properties
 gradle/gradle-daemon-jvm.properties
 /app/release
+
+# EvolutionX: platform-signed prebuilt imported by Android.bp
+!prebuilt/Smartspacer.apk

@@ -1,0 +1,37 @@
+// Copyright (C) 2026 Evolution X
+// SPDX-License-Identifier: GPL-3.0-only
+
+// prebuilt/Smartspacer.apk is built from this tree with
+// `./gradlew :app:assembleRelease` and signed here with the platform key.
+android_app_import {
+    name: "Smartspacer",
+    apk: "prebuilt/Smartspacer.apk",
+    certificate: "platform",
+    product_specific: true,
+    privileged: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    required: [
+        "privapp-permissions-smartspacer.xml",
+        "smartspacer-sysconfig.xml",
+    ],
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-smartspacer.xml",
+    sub_dir: "permissions",
+    src: "prebuilt/privapp-permissions-smartspacer.xml",
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "smartspacer-sysconfig.xml",
+    sub_dir: "sysconfig",
+    src: "prebuilt/smartspacer-sysconfig.xml",
+    product_specific: true,
+}

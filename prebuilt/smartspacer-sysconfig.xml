@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- Allow the ROM's privileged Smartspacer client to receive Google Smartspace targets. -->
+    <allow-association target="com.google.android.as" allowed="com.kieronquinn.app.smartspacer" />
+    <!-- Android System Intelligence stores feature opt-ins (e.g. At a Glance toggles) via PCS. -->
+    <allow-association target="com.google.android.as.oss" allowed="com.google.android.as" />
+    <allow-in-power-save package="com.kieronquinn.app.smartspacer" />
+    <allow-in-data-usage-save package="com.kieronquinn.app.smartspacer" />
+</config>
