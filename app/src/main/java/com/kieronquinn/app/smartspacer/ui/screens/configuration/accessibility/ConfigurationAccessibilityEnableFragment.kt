@@ -2,6 +2,7 @@ package com.kieronquinn.app.smartspacer.ui.screens.configuration.accessibility
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import com.kieronquinn.app.smartspacer.utils.extensions.isRomBackgroundManaged
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -41,6 +42,11 @@ class ConfigurationAccessibilityEnableFragment: BoundFragment<FragmentConfigurat
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (requireContext().isRomBackgroundManaged()) {
+            requireActivity().setResult(Activity.RESULT_OK)
+            requireActivity().finish()
+            return
+        }
         setupInsets()
         setupToolbar()
         setupRestrictedCard()

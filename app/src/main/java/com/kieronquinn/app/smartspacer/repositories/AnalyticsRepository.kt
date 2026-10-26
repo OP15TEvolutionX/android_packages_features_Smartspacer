@@ -2,6 +2,7 @@ package com.kieronquinn.app.smartspacer.repositories
 
 import android.content.Context
 import android.os.Build
+import com.google.firebase.FirebaseApp
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.crashlytics.setCustomKeys
@@ -23,6 +24,7 @@ class AnalyticsRepositoryImpl(
     private val scope = MainScope()
 
     private fun setupState() = scope.launch {
+        if (FirebaseApp.getApps(context).isEmpty()) return@launch
         settingsRepository.analyticsEnabled.asFlow().collect {
             FirebaseAnalytics.getInstance(context).setAnalyticsCollectionEnabled(it)
             FirebaseCrashlytics.getInstance().apply {

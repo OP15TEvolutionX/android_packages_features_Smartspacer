@@ -66,16 +66,16 @@ class NativeModeViewModelImpl(
         systemSmartspaceRepository.serviceRunning,
         shizukuServiceRepository.isReady
     ) { compat, running, ready ->
-        val isEnhancedEnabled = settingsRepository.enhancedMode.getSync() && compat.isNotEmpty()
+        val isEnhancedEnabled = compat.isNotEmpty()
         if(isEnhancedEnabled) {
-            State.Loaded(shizukuReady = true, isEnabled = true, compatibility = compat)
+            State.Loaded(ready, running, compat)
         }else{
             State.Dismiss
         }
     }.stateIn(vmScope, SharingStarted.Eagerly, State.Loading)
 
     override fun onSwitchClicked() {
-        // Locked permanently enabled in system mode
+        // The ROM routes Smartspace sessions to Smartspacer permanently.
     }
 
     override fun onOpenShizukuClicked(context: Context, isSetup: Boolean) {

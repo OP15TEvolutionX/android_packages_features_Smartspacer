@@ -106,12 +106,6 @@ class EnhancedModeFragment: BoundFragment<FragmentEnhancedModeBinding>(FragmentE
 
     private fun State.Loaded.loadItems(): List<BaseSettingsItem> {
         return listOf(
-            GenericSettingsItem.Switch(
-                enabled = true,
-                text = getSwitchText(),
-                onChanged = ::onSwitchChanged,
-                isSwitchEnabled = false
-            ),
             GenericSettingsItem.Card(
                 ContextCompat.getDrawable(requireContext(), R.drawable.ic_info),
                 compatibilityState.getEnabledContentList()

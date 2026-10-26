@@ -152,7 +152,7 @@ class SetupWidgetFragment: BoundFragment<FragmentSetupWidgetFragmentBinding>(Fra
     }
 
     private fun isServiceRunning(): Boolean {
-        return requireContext().isServiceRunning(SmartspacerAccessibiltyService::class.java)
+        return SmartspacerAccessibiltyService.isRunning(requireContext())
     }
 
     private inner class WidgetPinCallback: BroadcastReceiver() {
@@ -160,7 +160,7 @@ class SetupWidgetFragment: BoundFragment<FragmentSetupWidgetFragmentBinding>(Fra
         override fun onReceive(context: Context, intent: Intent) {
             viewModel.onWidgetAdded(context)
             shouldShowAccessibility =
-                !context.isServiceRunning(SmartspacerAccessibiltyService::class.java)
+                !SmartspacerAccessibiltyService.isRunning(context)
         }
 
     }

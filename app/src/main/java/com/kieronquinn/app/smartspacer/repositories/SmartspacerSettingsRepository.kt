@@ -493,7 +493,7 @@ class SmartspacerSettingsRepositoryImpl(
         private const val DEFAULT_OEM_HIDE_INCOMPATIBLE = false
 
         private const val KEY_UPDATE_CHECK_ENABLED = "update_check_enabled"
-        private const val DEFAULT_UPDATE_CHECK_ENABLED = true
+        private const val DEFAULT_UPDATE_CHECK_ENABLED = false
 
         private const val KEY_PLUGIN_REPOSITORY_ENABLED = "plugin_repository_enabled"
         private const val DEFAULT_PLUGIN_REPOSITORY_ENABLED = true
@@ -702,6 +702,7 @@ class SmartspacerSettingsRepositoryImpl(
     init {
         sharedPreferences.edit().putBoolean(KEY_ENHANCED_MODE, true).apply()
         upgradePrefsIfRequired()
+        enhancedMode.setSync(true)
     }
 
 }

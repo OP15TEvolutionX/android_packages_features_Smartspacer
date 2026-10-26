@@ -180,7 +180,7 @@ class SystemSmartspaceRepositoryImpl(
         SmartspacerSmartspaceManager(context)
     }
 
-    override val serviceRunning = MutableStateFlow(false)
+    override val serviceRunning = MutableStateFlow(true)
 
     override val homeTargets = combine(
         _homeTargets.asStateFlow(),
@@ -248,11 +248,7 @@ class SystemSmartspaceRepositoryImpl(
         if(smartspaceManager.isAvailable) {
             smartspaceManager.createSmartspaceSessions { surface, targets ->
                 scope.launch(Dispatchers.IO) {
-                    val converted = if (surface == UiSurface.HOMESCREEN) {
-                        targets.map { target -> target.toSmartspaceTarget() }
-                    } else {
-                        targets.map { target -> target.toSmartspaceTarget() }
-                    }
+                    val converted = targets.map { target -> target.toSmartspaceTarget() }
                     when(surface) {
                         UiSurface.HOMESCREEN -> _homeTargets.emit(converted)
                         UiSurface.LOCKSCREEN -> _lockTargets.emit(converted)
@@ -293,7 +289,7 @@ class SystemSmartspaceRepositoryImpl(
     }
 
     override suspend fun resetService(onlyIfAvailable: Boolean, killSystemUi: Boolean): Boolean {
-        serviceRunning.emit(false)
+        serviceRunning.emit(true)
         return true
     }
 

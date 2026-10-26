@@ -163,7 +163,10 @@ class ShizukuServiceRepositoryImpl(
         Shizuku.pingBinder()
     }.stateIn(scope, SharingStarted.Eagerly, Shizuku.pingBinder())
 
-    override val isReady = kotlinx.coroutines.flow.MutableStateFlow(true).stateIn(scope, SharingStarted.Eagerly, true)
+    override val isReady = kotlinx.coroutines.flow.flow {
+        settingsRepository.enhancedMode.set(true)
+        emit(true)
+    }.stateIn(scope, SharingStarted.Eagerly, false)
 
     override suspend fun assertReady(): Boolean {
         return true

@@ -120,7 +120,7 @@ class WidgetConfigurationViewModelImpl(
     }
 
     private val hasGrantedAccessibility = resumeBus.mapLatest {
-        context.isServiceRunning(SmartspacerAccessibiltyService::class.java)
+        SmartspacerAccessibiltyService.isRunning(context)
     }
 
     private val isLockScreenAvailable = combine(

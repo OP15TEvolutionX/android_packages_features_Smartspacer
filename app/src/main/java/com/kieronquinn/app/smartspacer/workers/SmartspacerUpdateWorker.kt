@@ -83,6 +83,7 @@ class SmartspacerUpdateWorker(
     }
 
     private fun isUpdateCheckEnabled(): Boolean {
+        if(!com.kieronquinn.app.smartspacer.BuildConfig.APP_UPDATE_CHECK_ENABLED) return false
         if(!NotificationChannel.UPDATES.isEnabled(applicationContext)) return false
         if(!settingsRepository.updateCheckEnabled.getSync()) return false
         return true

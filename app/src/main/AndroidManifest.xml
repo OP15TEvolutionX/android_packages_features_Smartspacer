@@ -34,21 +34,13 @@
         android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
 
-    <uses-permission
-        android:name="android.permission.MANAGE_SMARTSPACE"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission
-        android:name="android.permission.ACCESS_SMARTSPACE"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission
-        android:name="android.permission.INTERACT_ACROSS_USERS"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission
-        android:name="android.permission.MANAGE_USERS"
-        tools:ignore="ProtectedPermissions" />
-    <uses-permission
-        android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"
-        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MANAGE_SMARTSPACE" />
+    <uses-permission android:name="android.permission.ACCESS_SMARTSPACE" />
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_TASKS" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.MANAGE_USERS" />
+    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="com.kieronquinn.app.smartspacer.permission.ACCESS_SMARTSPACER_TARGETS" />
     <uses-permission android:name="com.kieronquinn.app.smartspacer.permission.ACCESS_SMARTSPACER_COMPLICATIONS" />
@@ -119,29 +111,12 @@
                 android:resource="@xml/app_shortcuts" />
         </activity>
 
-        <activity
-            android:name=".ui.activities.DummyHomeActivity"
-            android:excludeFromRecents="true"
-            android:exported="true"
-            android:noHistory="true"
-            android:theme="@style/Theme.Smartspacer">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.HOME" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <activity
             android:name=".ui.activities.permission.notification.NotificationPermissionActivity"
             android:excludeFromRecents="true"
             android:theme="@style/Theme.Smartspacer" />
 
-        <activity
-            android:name=".ui.activities.permission.accessibility.AccessibilityPermissionActivity"
-            android:excludeFromRecents="true"
-            android:theme="@style/Theme.Smartspacer" />
 
         <activity
             android:name=".ui.activities.permission.sms.SmsPermissionActivity"
@@ -930,20 +905,6 @@
             android:noHistory="true"
             android:theme="@style/Theme.Smartspacer.Transparent"/>
 
-        <service
-            android:name="com.kieronquinn.app.smartspacer.service.SmartspacerAccessibiltyService"
-            android:exported="true"
-            android:foregroundServiceType="specialUse"
-            android:label="@string/accessibility_service_label"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
-            <intent-filter>
-                <action android:name="android.accessibilityservice.AccessibilityService" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.accessibilityservice"
-                android:resource="@xml/accessibilityservice" />
-        </service>
 
         <service
             android:name=".service.SmartspacerManagerService"
@@ -1020,7 +981,7 @@
         <!-- Google Maps SDK -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="dummy_key" />
+            android:value="${MAPS_API_KEY}" />
 
         <meta-data
             android:name="com.google.android.gms.version"

@@ -11,6 +11,8 @@ public interface IActivityTaskManager {
         }
     }
 
+    java.util.List<ActivityManager.RunningTaskInfo> getTasks(int maxNum, boolean filterOnlyVisibleRecents, boolean keepIntentExtra, int displayId);
+
     void registerTaskStackListener(ITaskStackListener listener);
     void unregisterTaskStackListener(ITaskStackListener listener);
 

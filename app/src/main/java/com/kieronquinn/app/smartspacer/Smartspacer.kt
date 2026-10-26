@@ -383,7 +383,7 @@ class Smartspacer: Application(), Configuration.Provider {
         single { SmartspacerDatabase.getDatabase(get()) }
         single<WidgetRepository> { WidgetRepositoryImpl(get(), get()) }
         single<GrantRepository>(createdAtStart = true) { GrantRepositoryImpl(get()) }
-        single<AccessibilityRepository> { AccessibilityRepositoryImpl() }
+        single<AccessibilityRepository> { AccessibilityRepositoryImpl(get()) }
         single<GoogleWeatherRepository> { GoogleWeatherRepositoryImpl() }
         single<AtAGlanceRepository> { AtAGlanceRepositoryImpl() }
         single<CompatibilityRepository>(createdAtStart = true) { CompatibilityRepositoryImpl(get(), get(), get(), get(), get()) }

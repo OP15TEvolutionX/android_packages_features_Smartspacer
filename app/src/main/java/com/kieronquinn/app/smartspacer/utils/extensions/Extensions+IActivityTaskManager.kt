@@ -27,3 +27,6 @@ private fun IActivityTaskManager.onTasksChanged(): Flow<Unit> = callbackFlow {
         unregisterTaskStackListener(listener)
     }
 }.debounce(250L)
+fun IActivityTaskManager.getForegroundPackage() = onTasksChanged().mapLatest {
+    getTasks(1, false, false, 0).firstOrNull()?.topActivity?.packageName ?: ""
+}.flowOn(Dispatchers.IO)

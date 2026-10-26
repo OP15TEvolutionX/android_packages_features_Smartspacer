@@ -25,7 +25,7 @@ class SmartspacerManagerService: Service() {
 
     override fun onCreate() {
         super.onCreate()
-        startForeground(NotificationId.MANAGER_SERVICE, createNotification())
+        startForeground(NotificationId.MANAGER_SERVICE) { createNotification() }
     }
 
     override fun onDestroy() {

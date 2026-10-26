@@ -499,7 +499,7 @@ class SmartspacerSmartspaceService : LifecycleSmartspaceService() {
 
     override fun onCreate() {
         super.onCreate()
-        startForeground(NotificationId.NATIVE_SERVICE, createNotification())
+        startForeground(NotificationId.NATIVE_SERVICE) { createNotification() }
         notifications.cancelNotification(NotificationId.NATIVE_MODE)
         systemSmartspace.notifyServiceRunning()
         setHasUsedSetting()

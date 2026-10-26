@@ -349,7 +349,7 @@ fun Context.getNotificationListenerIntent(notificationListener: Class<out Notifi
 @Suppress("deprecation")
 fun Context.isServiceRunning(serviceClass: Class<out Service>): Boolean {
     if(serviceClass == SmartspacerAccessibiltyService::class.java &&
-        SmartspacerBackgroundService.isUsingEnhancedModeAppListener) {
+        (isRomBackgroundManaged() || SmartspacerBackgroundService.isUsingEnhancedModeAppListener)) {
         //Bypass need to enable accessibility
         return true
     }

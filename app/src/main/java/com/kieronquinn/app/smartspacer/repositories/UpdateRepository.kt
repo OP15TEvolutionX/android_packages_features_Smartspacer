@@ -38,6 +38,7 @@ class UpdateRepositoryImpl(
         .create(GitHubService::class.java)
 
     override suspend fun getUpdate(currentTag: String): Release? = withContext(Dispatchers.IO) {
+        if(!BuildConfig.APP_UPDATE_CHECK_ENABLED) return@withContext null
         if(!settingsRepository.updateCheckEnabled.get()) return@withContext null
         val releasesResponse = try {
             gitHubService.getReleases().execute()

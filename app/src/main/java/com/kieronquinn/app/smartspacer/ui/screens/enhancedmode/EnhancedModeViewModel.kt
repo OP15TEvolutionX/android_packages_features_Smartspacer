@@ -61,16 +61,7 @@ class EnhancedModeViewModelImpl(
     }.stateIn(vmScope, SharingStarted.Eagerly, State.Loading)
 
     override fun onSwitchClicked(context: Context, isSetup: Boolean) {
-        vmScope.launch {
-            if(enabled.get()){
-                disable(context)
-            }else{
-                //Force set the switch back to disabled
-                reloadBus.emit(System.currentTimeMillis())
-                //Navigate to the check page
-                enable(isSetup)
-            }
-        }
+        // ROM integration keeps enhanced mode enabled.
     }
 
     override fun onSkipClicked() {

@@ -7,14 +7,19 @@ plugins {
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
     id 'dev.rikka.tools.refine'
     id 'com.google.protobuf'
-    id 'com.google.gms.google-services'
-    id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services' apply false
+    id 'com.google.firebase.crashlytics' apply false
 }
 
+// Local ROM builds do not have the upstream Firebase project configuration.
+if (file('google-services.json').exists()) {
+    apply plugin: 'com.google.gms.google-services'
+    apply plugin: 'com.google.firebase.crashlytics'
+}
 apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 
-def tagName = '1.11.4'
-def tagCode = 1114
+def tagName = '9.99.99'
+def tagCode = 1000003
 
 android {
     compileSdkVersion 37
@@ -27,6 +32,7 @@ android {
         versionName tagName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "boolean", "APP_UPDATE_CHECK_ENABLED", "false"
         buildConfigField "String", "TAG_NAME", "\"${tagName}\""
     }
 

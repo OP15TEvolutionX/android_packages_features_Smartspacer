@@ -1,5 +1,6 @@
 package com.kieronquinn.app.smartspacer.service
 
+import com.kieronquinn.app.smartspacer.utils.extensions.isRomBackgroundManaged
 import android.app.NotificationManager
 import android.content.Context
 import android.view.accessibility.AccessibilityEvent
@@ -15,7 +16,8 @@ class SmartspacerAccessibiltyService: LifecycleAccessibilityService() {
 
     companion object {
         fun isRunning(context: Context): Boolean {
-            return SmartspacerBackgroundService.isUsingEnhancedModeAppListener ||
+            return context.isRomBackgroundManaged() ||
+                    SmartspacerBackgroundService.isUsingEnhancedModeAppListener ||
                     context.isServiceRunning(SmartspacerAccessibiltyService::class.java)
         }
     }

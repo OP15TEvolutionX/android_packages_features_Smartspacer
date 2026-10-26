@@ -38,7 +38,7 @@ sealed class GenericSettingsItem(val type: GenericSettingsItemType): BaseSetting
         val enabled: Boolean,
         val text: CharSequence,
         val onChanged: (checked: Boolean) -> Unit,
-        val isSwitchEnabled: Boolean = true
+        val isEnabled: Boolean = true
     ): GenericSettingsItem(GenericSettingsItemType.SWITCH)
 
     data class Setting(

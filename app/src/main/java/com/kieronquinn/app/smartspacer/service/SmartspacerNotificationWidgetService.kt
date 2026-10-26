@@ -133,7 +133,7 @@ class SmartspacerNotificationWidgetService: LifecycleService() {
 
     override fun onCreate() {
         super.onCreate()
-        startForeground(NotificationId.NOTIFICATION_SERVICE, createNotification())
+        startForeground(NotificationId.NOTIFICATION_SERVICE) { createNotification() }
         setupResumeState()
         setupState()
     }

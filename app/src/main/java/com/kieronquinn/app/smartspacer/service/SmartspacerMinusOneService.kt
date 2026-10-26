@@ -25,7 +25,7 @@ class SmartspacerMinusOneService: LifecycleService() {
 
     override fun onCreate() {
         super.onCreate()
-        startForeground(NotificationId.MINUS_ONE_SERVICE, createNotification())
+        startForeground(NotificationId.MINUS_ONE_SERVICE) { createNotification() }
         overlaysController = OverlayController()
     }
 

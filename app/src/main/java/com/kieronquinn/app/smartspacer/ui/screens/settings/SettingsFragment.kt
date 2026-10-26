@@ -158,13 +158,13 @@ class SettingsFragment: BaseSettingsFragment(), Root, CanShowSnackbar {
             ContextCompat.getDrawable(requireContext(), R.drawable.ic_settings_battery_saver),
             onClick = viewModel::onBatteryOptimisationClicked,
         ),
-        SwitchSetting(
+        if (com.kieronquinn.app.smartspacer.BuildConfig.APP_UPDATE_CHECK_ENABLED) SwitchSetting(
             checkForUpdates,
             getString(R.string.settings_enable_update_check_title),
             getString(R.string.settings_enable_update_check_content),
             ContextCompat.getDrawable(requireContext(), R.drawable.ic_updates),
             onChanged = viewModel::onCheckForUpdatesChanged
-        ),
+        ) else null,
         SwitchSetting(
             enableAnalytics,
             getString(R.string.settings_enable_analytics_title),

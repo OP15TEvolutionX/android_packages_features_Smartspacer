@@ -40,6 +40,7 @@ import com.kieronquinn.app.smartspacer.utils.extensions.lockscreenShowing
 import com.kieronquinn.app.smartspacer.utils.extensions.runningApp
 import com.kieronquinn.app.smartspacer.utils.extensions.sendBroadcast
 import com.kieronquinn.app.smartspacer.utils.extensions.startForeground
+import com.kieronquinn.app.smartspacer.utils.extensions.isRomBackgroundManaged
 import com.kieronquinn.app.smartspacer.utils.extensions.whenCreated
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine
@@ -119,11 +120,16 @@ class SmartspacerBackgroundService: LifecycleService() {
 
     override fun onCreate() {
         super.onCreate()
-        startForeground(NotificationId.BACKGROUND_SERVICE, createNotification())
+        startForeground(NotificationId.BACKGROUND_SERVICE) { createNotification() }
         setupOemSessions()
         setupOemVisibility()
         setupEnhancedModeAppListenerIfPossible()
         setupDarkModeListener()
+    }
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        val result = super.onStartCommand(intent, flags, startId)
+        return if (isRomBackgroundManaged()) START_STICKY else result
     }
 
     override fun onDestroy() {
