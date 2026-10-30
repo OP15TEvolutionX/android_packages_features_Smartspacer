@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Facoltativo</b>: Abilita questo modulo sul tuo Launcher o sul plugin del Launcher di Google Feed per rimpiazzare Google Discovery con Expanded Smartspace. Devi anche abilitare l\'opzione nelle impostazioni di Expanded Smartpace.</string>
     <string name="dummy_home_content">Questa schermata esiste per aggirare i Widget mal implementati utilizzati dai Plugin Smartspacer.\n\nSmartspacer non può essere impostato come launcher, si prega di selezionarne un altro.</string>
     <string name="dummy_home_open_settings">Apri le Impostazioni</string>
     <string name="notification_service">Servizio Notifiche di Smartspacer</string>

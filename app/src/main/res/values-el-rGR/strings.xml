@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Προαιρετικό</b>: Ενεργοποιήστε αυτήν την πρόσθετη υπηρεσία στον εκκινητή σας ή στην θέση του Google Feed της εφαρμογής εκκίνησης για να επιτρέψετε την αντικατάσταση της ροής Google Discover με το Expanded Smartspace. Πρέπει επίσης να ενεργοποιήσετε την επιλογή στις ρυθμίσεις Expanded Smartspace στο Smartspacer.</string>
     <string name="dummy_home_content">Αυτή η οθόνη υπάρχει για να διορθώνει τα γραφικά στοιχεία που χρησιμοποιούνται από τα πρόσθετα του Smartspacer και δεν έχουν εφαρμοστεί σωστά.\n\nΤο Smartspacer δεν μπορεί να λειτουργήσει ως εκκινητής, επιλέξτε διαφορετικό πρόγραμμα εκκίνησης.</string>
     <string name="dummy_home_open_settings">Άνοιγμα Ρυθμίσεων</string>
     <string name="notification_service">Υπηρεσία Ειδοποιήσεων Smartspacer</string>

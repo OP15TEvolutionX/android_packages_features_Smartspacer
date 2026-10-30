@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>اختياري</b> مكن هذه الوحدة على المشغل أو المكون الإضافي لخلاصة Google للسماح باستبدال Google Discover بمساحة ذكية موسعة. يجب عليك أيضا تمكين الخيار في إعدادات Smartspace الموسعة في Smartspacer.</string>
     <string name="dummy_home_content">هذه الشاشة موجودة للعمل حول التطبيقات المصغرة التي تم تنفيذها بشكل سيئ المستخدمة بواسطة إضافات Smartspacer. \n\nSmartspacer لا يمكن استخدمه كمشغل شاشة رئيسية، يرجى تحديد مشغل مختلف.</string>
     <string name="dummy_home_open_settings">فتح الإعدادات</string>
     <string name="notification_service">خدمة إشعار Smartspacer</string>

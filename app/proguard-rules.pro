@@ -25,7 +25,6 @@
 -keep class com.kieronquinn.app.smartspacer.** { *; }
 -keep class android.** { *; }
 
--dontwarn de.robv.android.xposed.**
 -dontwarn javax.naming.**
 
 -keepclassmembers class * extends com.google.protobuf.GeneratedMessageLite {

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Valgfritt</b>: Slå på denne modulen på startskjermen eller startskjermens programtillegg for Google Feed for å tillate Smartspacer å erstatte Google Discover med Utvidet Smartspace. Du må også aktivere innstillingen i Utvidet Smartspace-innstillingsgruppen i Smartspacer for at dette skal fungere.</string>
     <string name="dummy_home_content">Denne skjermen finnes for å jobbe rundt dårlig implementerte moduler brukt av Smartspacer-utvidelser.\n\nSmartspacer kan ikke brukes som en startskjerm: vennligst velg en annen startskjerm</string>
     <string name="dummy_home_open_settings">Åpne innstillinger</string>
     <string name="notification_service">Smartspacer-varslingstjeneste</string>

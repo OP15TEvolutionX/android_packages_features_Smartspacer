@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>可選</b>：在您的啟動器或啟動器的 Google Feed 外掛上啟用此模組，以便將 Google Discover 替換為擴展的 Smartspace。您還必須在 Smartspacer 的擴展 Smartspace 設定中啟用此選項。</string>
     <string name="dummy_home_content">這個畫面的存在是為了解決 Smartspacer 外掛使用的功能組件執行不佳的問題。\n\nSmartspacer 無法充當啟動器，請選擇其他啟動器。</string>
     <string name="dummy_home_open_settings">開啟設定</string>
     <string name="notification_service">Smartspacer 通知服務</string>

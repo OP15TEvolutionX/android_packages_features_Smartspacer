@@ -13,7 +13,7 @@ The ROM does not run Gradle. Rebuild the prebuilt after changing the sources:
 Requirements: Java 21, Android SDK platform 37, build-tools 36.0.0, and an
 ignored `local.properties` with `sdk.dir`. Firebase is applied only when
 `app/google-services.json` exists. Keep `versionCode` above the last shipped
-build (currently 1000003).
+build (currently 1000004).
 
 ## ROM wiring
 
@@ -25,3 +25,5 @@ build (currently 1000003).
 - The sysconfig allows Smartspacer to bind Google ASI directly, and allows
   ASI to bind Private Compute Services, which stores At a Glance settings.
 - The app is not persistent, so `pm disable-user` fully stops it.
+- The optional Xposed module (Discover replacement) is removed, so the APK
+  carries no xposedmodule metadata or xposed_init entry point.

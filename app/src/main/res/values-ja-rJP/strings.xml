@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>任意</b>: Google DiscoverをExpanded Smartspaceに置き換えるためにランチャーのGoogle Discoverを有効にしてください。また、Expanded Smartspaceの設定でオプションを有効にする必要があります。</string>
     <string name="dummy_home_content">この画面は、Smartspacer プラグインで使用されているウィジェットをうまく動作させるために存在します。\n\nSmartspacerはランチャーとしては動作しません。別のランチャーを選択してください。</string>
     <string name="dummy_home_open_settings">設定を開く</string>
     <string name="notification_service">Smartspacer通知サービス</string>

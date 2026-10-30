@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="xposed_scope">
-        <!-- Pixel Launcher -->
-        <item>com.google.android.apps.nexuslauncher</item>
-        <!-- Lawnchair -->
-        <item>app.lawnchair</item>
-        <item>app.lawnchair.debug</item>
-        <item>app.lawnchair.twelvel</item>
-        <item>app.lawnchair.lawnfeed</item>
-        <!-- Total Launcher -->
-        <item>com.ss.launcher2</item>
-        <!-- Hyperion Launcher -->
-        <item>projekt.hyperion.dock</item>
-        <!-- Rootless Pixel Launcher -->
-        <item>amirz.aidlbridge</item>
-        <!-- Action Launcher -->
-        <item>com.actionlauncher.nowbridge</item>
-    </string-array>
     <!-- Widget components for predictions, supposed to be copied from the Pixel Launcher but currently custom as theirs are empty. This is what I expect theirs will look like. -->
     <array name="weather_recommendations">
         <!-- Google Weather -->

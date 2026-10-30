@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Опціональне</b>: При використанні цього модулю на вашому лаунчері або на плагіні Google Feed для вашого лаунчера, щоб дозволити змінення Google Discover на Доповнений Smartspace. Ви маєте також увімкнути цю функцію в налаштуваннях Доповненого Smartspace.</string>
     <string name="dummy_home_content">Цей екран для роботи з погано реалізованими віджетами, які використовуються Smartspacer модулями.\n\nSmartspacer не може виступати лаунчером, будь ласка, виберіть інший лаунчер.</string>
     <string name="dummy_home_open_settings">Відкрити налаштування</string>
     <string name="notification_service">Служба сповіщень Smartspacer</string>

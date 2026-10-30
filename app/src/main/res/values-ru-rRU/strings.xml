@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Optional</b>: Включите этот модуль в вашем лаунчере или Google Feed, чтобы заменить Google Discover на расширенное Smartspace. Вы также должны включить эту опцию в настройках расширенного Smartspace в настройках приложения.</string>
     <string name="dummy_home_content">Этот экран существует для того, чтобы обойти ограничения, вызванные неправильно написанными Виджетами.\n\nSmartspacer - не лаунчер. Пожалуйста, установите другой лаунчер по умолчанию.</string>
     <string name="dummy_home_open_settings">Открыть настройки</string>
     <string name="notification_service">Служба уведомлений Smartspacer</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Volitelný</b>: Povolte tento modul ve vašem spouštěči nebo pluginu Google Feed spouštěči, abyste mohli nahradit Google Discover funkcí Expanded Smartspace. Tuto možnost je také nutné povolit v nastavení Expanded Smartspace v aplikaci Smartspacer.</string>
     <string name="dummy_home_content">Tato obrazovka existuje proto, aby obešla špatně implementované widgety používané pluginy Smartspacer.\n\nSmartspacer nemůže fungovat jako spouštěč, vyberte prosím jiný spouštěč.</string>
     <string name="dummy_home_open_settings">Otevřít nastavení</string>
     <string name="notification_service">Oznamovací služba Chytrý Distanční vložka</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Opțional</b>: Activează acest modul în plugin-ul Google Feed al lansatorului sau al lansatorului pentru a permite înlocuirea Google Discover cu Smartspace extins. De asemenea, trebuie să activezi opțiunea în setările extinse Smartspace din Smartspacer.</string>
     <string name="dummy_home_content">Acest ecran există ca soluție pentru widget-urile utilizate de plugin-urile Smartspacer.\n\nSmartspacer nu poate acționa ca lansator, selectează un alt lansator.</string>
     <string name="dummy_home_open_settings">Deschide setările</string>
     <string name="notification_service">Serviciul de notificare Smartspacer</string>

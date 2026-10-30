@@ -3,8 +3,6 @@ package com.kieronquinn.app.smartspacer.ui.screens.expanded.settings
 import android.content.Context
 import android.os.Build
 import com.kieronquinn.app.smartspacer.components.navigation.ContainerNavigation
-import com.kieronquinn.app.smartspacer.providers.SmartspacerXposedSettingsProvider
-import com.kieronquinn.app.smartspacer.providers.SmartspacerXposedStateProvider
 import com.kieronquinn.app.smartspacer.repositories.SearchRepository
 import com.kieronquinn.app.smartspacer.repositories.SearchRepository.SearchApp
 import com.kieronquinn.app.smartspacer.repositories.SmartspacerSettingsRepository
@@ -14,13 +12,11 @@ import com.kieronquinn.app.smartspacer.repositories.SmartspacerSettingsRepositor
 import com.kieronquinn.app.smartspacer.repositories.SmartspacerSettingsRepository.TintColour
 import com.kieronquinn.app.smartspacer.ui.base.BaseViewModel
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.flow.mapLatest
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
@@ -97,9 +93,8 @@ class ExpandedSettingsViewModelImpl(
 
     private val resumeBus = MutableStateFlow(System.currentTimeMillis())
 
-    private val xposedAvailable = resumeBus.mapLatest {
-        SmartspacerXposedStateProvider.getXposedEnabled(context)
-    }.flowOn(Dispatchers.IO)
+    // The Xposed Discover replacement is not shipped in the ROM build.
+    private val xposedAvailable = flowOf(false)
 
     private val openMode = combine(
         openModeHome.asFlow(),
@@ -241,7 +236,6 @@ class ExpandedSettingsViewModelImpl(
     override fun onXposedEnabledChanged(context: Context, enabled: Boolean) {
         vmScope.launch {
             xposedEnabled.set(enabled)
-            SmartspacerXposedSettingsProvider.notifyChange(context)
         }
     }
 

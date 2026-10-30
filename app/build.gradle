@@ -19,7 +19,7 @@ if (file('google-services.json').exists()) {
 apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 
 def tagName = '9.99.99'
-def tagCode = 1000003
+def tagCode = 1000004
 
 android {
     compileSdkVersion 37
@@ -177,8 +177,6 @@ dependencies {
     implementation("com.google.firebase:firebase-crashlytics")
     implementation("com.google.firebase:firebase-analytics")
 
-    //Xposed for Discover replacement
-    compileOnly("de.robv.android.xposed:api:82")
 
     //Blur implementation
     implementation "com.github.Dimezis:BlurView:version-3.2.0"

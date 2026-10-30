@@ -451,20 +451,6 @@
             android:multiprocess="false"
             android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
 
-        <!-- Allows Xposed module to read whether the pref is enabled. Unprotected. -->
-        <provider
-            android:authorities="${applicationId}.xposed"
-            android:name=".providers.SmartspacerXposedSettingsProvider"
-            android:exported="true"
-            tools:ignore="ExportedContentProvider" />
-
-        <!-- Allows instant checking of whether Xposed module is enabled, by running in a new process -->
-        <provider
-            android:authorities="${applicationId}.xposedstate"
-            android:name=".providers.SmartspacerXposedStateProvider"
-            android:process=":xposed"
-            android:exported="false" />
-
         <!-- Built in targets -->
         <provider
             android:name="com.kieronquinn.app.smartspacer.components.smartspace.targets.DefaultTarget"
@@ -995,19 +981,6 @@
         <meta-data
             android:name="firebase_crashlytics_collection_enabled"
             android:value="false" />
-
-        <meta-data
-            android:name="xposedmodule"
-            android:value="true"/>
-        <meta-data
-            android:name="xposeddescription"
-            android:value="@string/xposed_desc"/>
-        <meta-data
-            android:name="xposedminversion"
-            android:value="90"/>
-        <meta-data
-            android:name="xposedscope"
-            android:resource="@array/xposed_scope"/>
 
         <activity android:name=".ui.activities.TestActivity"
             android:theme="@style/Theme.Smartspacer"

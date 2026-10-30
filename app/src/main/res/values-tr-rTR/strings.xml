@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Opsiyonel</b>: Google Discover\'in Expanded Smarspace ile değiştirilmesine izin vermek için başlatıcınızda veya başlatıcının Google Feed eklentisinde bu ayarı etkinleştirin. Ayrıca Smartspacer\'daki Expanded Smartspace ayarlarında da bu seçeneği etkinleştirmeniz gerekir.</string>
     <string name="dummy_home_content">Bu ekran Smartspacer Eklentileri tarafından kullanılan kötü uygulanmış Widget\'larla çalışmak için vardır.\n\nSmartspacer bir başlatıcı olarak hareket edemez, lütfen farklı bir başlatıcı seçin.</string>
     <string name="dummy_home_open_settings">Ayarları aç</string>
     <string name="notification_service">Smartspace Bildirim Servisi</string>

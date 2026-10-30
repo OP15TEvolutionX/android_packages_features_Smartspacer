@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Opcional</b>: ative este módulo no seu Launcher ou use uma extensão do Google Feed para poder substituir o Google Discover pelo Smartspace expandido. Você também precisará habilitar a opção nas configurações do Smartspace expandido no Smartspacer.</string>
     <string name="dummy_home_content">Esta tela foi criada para contornar widgets mal implementados usados pelas extensões do Smartspacer.\n\nO Smartspacer não pode funcionar como um Launcher, por favor, escolha um Launcher diferente.</string>
     <string name="dummy_home_open_settings">Abrir Configurações</string>
     <string name="notification_service">Serviço de Notificações do Smartspacer</string>

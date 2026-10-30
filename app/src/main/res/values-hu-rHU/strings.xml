@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_desc"><b>Optional</b>: Enable this module on your launcher or launcher\'s Google Feed plugin to allow replace Google Discover with Expanded Smartspace. You must also enable the option in the Expanded Smartspace settings in Smartspacer.</string>
     <string name="dummy_home_content">Ez a képernyő a Smartspacer bővítmények által használt, rosszul implementált modulok megkerülésére szolgál.\n\nA Smartspacer nem tud indítóprogramként működni, válasszon egy másik indítóprogramot.</string>
     <string name="dummy_home_open_settings">Beállítások megnyitása</string>
     <string name="notification_service">Smartspacer értesítési szolgáltatás</string>
